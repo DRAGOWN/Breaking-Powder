@@ -40,3 +40,10 @@ python p0wd3r.py -f target_names.txt 123,2024-2026 -o output.txt --min 8 --max 1
 - string
 - argparse
 - sys
+
+# v1.1 Updates
+Added:
+- Examples in help page
+- The number-symbol-word-symbol computed lines
+- a tool banner
+- README file
