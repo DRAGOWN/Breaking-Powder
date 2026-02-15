@@ -4,6 +4,17 @@ import string
 import argparse
 import sys
 
+print("")
+print("\033[48;5;22m\033[38;5;15m      35  \033[0m")
+print("\033[48;5;22m\033[38;5;15m          \033[0m")
+print("\033[48;5;22m\033[38;5;15m    Br    \033[0m\033[38;5;22m  e  a  k  i  n  g  \033[0m")
+print("\033[48;5;22m\033[38;5;15m          \033[0m")
+print("          \033[48;5;22m\033[38;5;15m      84  \033[0m")
+print("          \033[48;5;22m\033[38;5;15m          \033[0m")
+print("          \033[48;5;22m\033[38;5;15m    Po    \033[0m\033[38;5;22m w d e r\033[0m")
+print("          \033[48;5;22m\033[38;5;15m          \033[0m")
+print("")
+
 def get_substitutions():
     return {
         'a': ['4', '@', '&', '^', '!', '1', ' '],
@@ -82,16 +93,6 @@ def generate_wordlist(words, numbers, output_file, min_len, max_len):
                     options_set = {l_c, u_c}
                     if l_c in subs: options_set.update(subs[l_c])
                     char_options.append(list(options_set))
-
-                print("\033[48;5;22m\033[38;5;15m     35 \033[0m")
-                print("\033[48;5;22m\033[38;5;15m        \033[0m")
-                print("\033[48;5;22m\033[38;5;15m  Br    \033[0m\033[38;5;22m eaking\033[0m")
-                print("\033[48;5;22m\033[38;5;15m        \033[0m")
-                print("        \033[48;5;22m\033[38;5;15m     84 \033[0m")
-                print("        \033[48;5;22m\033[38;5;15m        \033[0m")
-                print("        \033[48;5;22m\033[38;5;15m  Po    \033[0m\033[38;5;22m wder\033[0m")
-                print("        \033[48;5;22m\033[38;5;15m        \033[0m")
-                print("")
                 print(f"[*] Permutating: {word}...")
                 for combination in itertools.product(*char_options):
                     gen_word = "".join(combination)
